@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-import 'package:firebase_database/firebase_database.dart';
-
 
 class DetailsPage extends StatefulWidget {
   final heroTag;
   final foodName;
   final foodPrice;
-  final DBRef = FirebaseDatabase.instance.reference();
   final foodPer=0.6;
 
   DetailsPage({this.heroTag, this.foodName, this.foodPrice});
@@ -92,9 +89,7 @@ class _DetailsPageState extends State<DetailsPage> {
                       animation: true,
                       circularStrokeCap: CircularStrokeCap.round,
                       progressColor: Colors.indigo[400],
-
                       percent:widget.foodPer,
-
                       center: new Text(
                         widget.foodPrice,
                         style:
@@ -106,16 +101,12 @@ class _DetailsPageState extends State<DetailsPage> {
                         new TextStyle(fontWeight: FontWeight.bold, fontSize: 17.0),
                       ),
                       addAutomaticKeepAlive: true,
-
                     )
-
-
                   ],
                 ))
           ])
         ]));
   }
-
 
   Widget _buildInfoCard(String cardTitle, String info, String unit) {
     return InkWell(
@@ -135,7 +126,6 @@ class _DetailsPageState extends State<DetailsPage> {
             style: BorderStyle.solid,
           width: 0.75
           ),
-          
         ),
         height: 100.0,
         width: 100.0,

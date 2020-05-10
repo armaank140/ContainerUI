@@ -69,8 +69,6 @@ class _MyHomePageState extends State<MyHomePage> {
                           _buildFoodItem('assets/plate4.png', 'Tea', '\76.0%')
                         ]))),
 
-
-
         ],
             ),
           )
