@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smart_container/detailsPage.dart';
 
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
